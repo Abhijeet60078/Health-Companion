@@ -1,0 +1,373 @@
+/* ==================== Settings Page Styles ==================== */
+
+.settings-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+}
+
+.settings-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-md);
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.settings-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: var(--gray-dark);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: var(--transition);
+  text-align: left;
+}
+
+.settings-tab:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.settings-tab.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.settings-tab i {
+  width: 18px;
+  text-align: center;
+}
+
+.settings-panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.settings-panel h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: var(--dark);
+  border-bottom: 2px solid var(--gray-lightest);
+  padding-bottom: 12px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gray-lightest);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.form-group input {
+  padding: 10px 14px;
+  border: 1px solid var(--gray-lighter);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.1);
+}
+
+/* ==================== Security Section ==================== */
+
+.security-section {
+  padding-top: 20px;
+}
+
+.security-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.security-section p {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: var(--gray-light);
+}
+
+/* ==================== Notification Settings ==================== */
+
+.notification-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-lightest);
+}
+
+.notification-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.notification-info p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--gray-light);
+}
+
+/* ==================== Toggle Switch ==================== */
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray-lighter);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: var(--primary);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+/* ==================== Appearance Settings ==================== */
+
+.appearance-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.setting-item h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border: 2px solid var(--gray-lightest);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.theme-option:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.theme-option input {
+  display: none;
+}
+
+.theme-option i {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.theme-option input:checked + i {
+  color: var(--primary);
+}
+
+.range-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--gray-lightest);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  border: none;
+  transition: var(--transition);
+}
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.range-labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  font-size: 12px;
+  color: var(--gray-light);
+}
+
+.range-labels span {
+  text-align: center;
+}
+
+/* ==================== Responsive ==================== */
+
+@media (max-width: 768px) {
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    position: relative;
+    top: 0;
+    padding: 8px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .notification-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .toggle-switch {
+    align-self: flex-end;
+  }
+
+  .theme-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-tab {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .settings-panel {
+    padding: 16px;
+  }
+
+  .settings-panel h3 {
+    font-size: 16px;
+  }
+}

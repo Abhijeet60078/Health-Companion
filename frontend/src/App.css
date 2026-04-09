@@ -1,0 +1,26 @@
+/* ==================== App Styles ==================== */
+
+.App {
+  min-height: 100vh;
+  background: var(--bg-light);
+}
+
+/* Override default styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-light);
+}
+

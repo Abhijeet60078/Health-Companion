@@ -1,0 +1,146 @@
+/* ==================== Doctors Page Styles ==================== */
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.doctor-card-header {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.doctor-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid var(--primary-light);
+}
+
+.status-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.available {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-badge.busy {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.status-badge.offline {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.doctor-name {
+  margin: 8px 0 0 0;
+  font-size: 18px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.doctor-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.doctor-rating i {
+  font-size: 14px;
+}
+
+.doctor-specialty {
+  margin: 0;
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid var(--gray-lightest);
+  border-bottom: 1px solid var(--gray-lightest);
+}
+
+.doctor-info p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--gray-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-info i {
+  width: 16px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.doctor-info a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.doctor-info a:hover {
+  text-decoration: underline;
+}
+
+.doctor-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+}
+
+.doctor-actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .doctors-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-card {
+    padding: 16px;
+  }
+}

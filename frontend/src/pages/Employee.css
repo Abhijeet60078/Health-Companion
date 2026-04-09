@@ -1,0 +1,72 @@
+/* ==================== Employee Page Styles ==================== */
+
+.employees-table {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.employees-table .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employees-table th {
+  background: var(--bg-light);
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid var(--gray-lightest);
+}
+
+.employees-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--gray-lightest);
+}
+
+.employees-table tr:hover {
+  background: var(--primary-light);
+}
+
+.employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-light);
+}
+
+.badge-active {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.badge-on-leave {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+@media (max-width: 768px) {
+  .employees-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .employees-table .table {
+    font-size: 12px;
+  }
+
+  .employees-table td,
+  .employees-table th {
+    padding: 8px;
+  }
+
+  .employee-avatar {
+    width: 32px;
+    height: 32px;
+  }
+}

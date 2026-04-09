@@ -1,0 +1,175 @@
+/* ==================== Patients Page Styles ==================== */
+
+.view-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.patient-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.patient-card-header {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.patient-card-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid var(--primary-light);
+}
+
+.status-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-badge.inactive {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.status-badge.critical {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.patient-card-name {
+  margin: 0;
+  font-size: 16px;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.patient-card-info {
+  margin: 4px 0;
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.4;
+}
+
+.patient-card-info strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.patient-card-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-lightest);
+}
+
+.patient-card-actions .btn {
+  flex: 1;
+}
+
+.patients-table {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.patients-table .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th {
+  background: var(--bg-light);
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid var(--gray-lightest);
+}
+
+.patients-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--gray-lightest);
+}
+
+.patients-table tr:hover {
+  background: var(--primary-light);
+}
+
+.badge-active {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.badge-inactive {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.badge-critical {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+@media (max-width: 1024px) {
+  .patients-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .patients-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .patients-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .patients-table .table {
+    font-size: 12px;
+  }
+
+  .patients-table td,
+  .patients-table th {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .patients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle .btn {
+    flex: 1;
+  }
+}
